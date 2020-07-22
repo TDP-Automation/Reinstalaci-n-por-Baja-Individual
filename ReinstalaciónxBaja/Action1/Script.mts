@@ -205,8 +205,9 @@ End Sub
 Sub FlujoWic()
 	
 	If DataTable("e_WIC_ValidaCli",dtLocalSheet)="SI" Then
-		RunAction "WIC1", oneIteration
+	RunAction "WIC1", oneIteration
 	End  If
+
 '		'En la ventana Sistema de información y validación del cliente
 '		'Damos clic en el boton "Continuar"
 '		If UIAWindow("Ejecutivo de interacción").UIAWindow("Autenticación del Cliente").UIAObject("Movistar").UIAButton("Continuar").Exist(1) Then

@@ -369,7 +369,19 @@ Sub NegociarConfiguracion()
 	
 End Sub
 Sub NegociarDistribucion()
-	
+		While JavaWindow("Ejecutivo de interacción").JavaInternalFrame("Negociar Distribución").JavaEdit("Nombre y Dirección de").Exist = False
+			wait 1
+			
+		Wend
+		Dim text
+		text=JavaWindow("Ejecutivo de interacción").JavaInternalFrame("Negociar Distribución").JavaEdit("Nombre y Dirección de").GetROProperty("text")
+		While text=""
+			wait 1
+			text=JavaWindow("Ejecutivo de interacción").JavaInternalFrame("Negociar Distribución").JavaEdit("Nombre y Dirección de").GetROProperty("text")
+		Wend
+		wait 1
+
+	   
 		tiempo = 0
 		Do
 			wait 1
